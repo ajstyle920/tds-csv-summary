@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSV Summary</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; line-height: 1.6; color: #222; background: #fafafa; }
+  h1 { margin-bottom: 0; }
+  .tag { color: #666; margin-top: 4px; }
+  pre { background: #1e1e1e; color: #eee; padding: 14px; border-radius: 8px; overflow-x: auto; }
+  a.button { display: inline-block; background: #2563eb; color: #fff; padding: 10px 16px; border-radius: 6px; text-decoration: none; }
+</style>
+</head>
+<body>
+  <h1>CSV Summary</h1>
+  <p class="tag">Get a quick overview of any CSV file in one command.</p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Counts rows, columns and missing values</li>
+    <li>Numeric columns: min, max, mean, median</li>
+    <li>Text columns: unique values and the most common ones</li>
+  </ul>
+
+  <h2>Try it</h2>
+  <pre>python csv_summary.py sample.csv
+python csv_summary.py sample.csv --top 5</pre>
+
+  <h2>Example output</h2>
+  <pre>File: sample.csv
+Rows: 8   Columns: 5
+
+== score ==
+  filled: 6   missing: 2
+  type:   numeric
+  min:    68
+  max:    91
+  mean:   80.33
+  median: 80.5</pre>
+
+  <p><a class="button" href="https://github.com/YOUR-USERNAME/tds-csv-summary">View the code on GitHub</a></p>
+</body>
+</html>
